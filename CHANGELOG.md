@@ -1,3 +1,6 @@
+# v1.2
+- Fixed the layout in Chrome.
+
 # v1.1
 
 ## Changes
