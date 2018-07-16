@@ -2,8 +2,8 @@
 // @name         Use ChitChat
 // @namespace    http://github.com/marcgamesons
 // @version      1.2.1
-// @updateURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/update-test/src/update/use-chitchat.user.js
-// @downloadURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/update-test/src/update/use-chitchat.user.js
+// @updateURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/src/update/use-chitchat.user.js
+// @downloadURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/src/update/use-chitchat.user.js
 // @description  Replaces Twitch's default chat with https://chitchat.ma.pe by https://twitter.com/mape
 // @author       https://github.com/MarcGamesons/twitch-userscript-use-chitchat
 // @license	 MIT - https://opensource.org/licenses/MIT
