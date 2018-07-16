@@ -2,6 +2,7 @@
 // @name         Use ChitChat
 // @namespace    http://tampermonkey.net/
 // @version      1.0
+// @updateURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/src/update/use-chitchat.user.js
 // @description  Replaces Twitch's default chat with https://chitchat.ma.pe by https://twitter.com/mape
 // @author       https://github.com/MarcGamesons/twitch-userscript-use-chitchat
 // @match        https://www.twitch.tv/*
