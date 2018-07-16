@@ -1,5 +1,5 @@
 # v1.2.1
-- Added the ability to update the script.
+- Added auto-updating.
 
 # v1.2
 - Fixed the layout in Chrome.
