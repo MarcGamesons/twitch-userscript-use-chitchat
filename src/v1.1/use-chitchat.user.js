@@ -11,11 +11,11 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     //Wait 15 seconds so that the site can load fully (even if you use add-ons like FFZ).
-    window.setTimeout(function(){
+    window.setTimeout(function () {
 
         // Get the container that contains the chat messages.
         var node = document.getElementsByClassName("chat-list__lines"); // v1.0 used "chat-messages".

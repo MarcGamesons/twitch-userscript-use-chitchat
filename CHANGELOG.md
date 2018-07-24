@@ -1,3 +1,8 @@
+# v1.2.2
+- Decreased the time you have to wait until ChitChat gets loaded.
+- Changed the file structure.
+    -   Future versions will get updates throught the latest folder, which will always contain the latest version.
+
 # v1.2.1
 - Added auto-updating.
 
