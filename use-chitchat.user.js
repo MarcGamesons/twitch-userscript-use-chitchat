@@ -14,9 +14,7 @@
 (function () {
     'use strict';
 
-    // Wait 2 milliseconds so that the needed containers can load.
-    window.setTimeout(function () {
-
+    function replaceTwitchChat() {
         // Get the container that contains the chat messages.
         var node = document.getElementsByClassName("chat-list__lines"); // v1.0 used "chat-messages".
 
@@ -45,6 +43,33 @@
         data = JSON.stringify(data);
         ifrm.postMessage(localStorage.setItem("settings", data));
         ifrm.location.reload();
+    }
 
-    }, 200); // Increase this value if ChitChat isn't loading. 1000 = 1 second.
+    // Select the node that will be observed for mutations
+    const targetNode = document.querySelector('.chat-shell');
+
+    // Options for the observer (which mutations to observe)
+    const config = { childList: true, subtree: true };
+
+    // Callback function to execute when mutations are observed
+    const callback = function (mutationsList, observer) {
+        for (let mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(addedNode => {
+                    if (addedNode.classList !== undefined) {
+                        if (addedNode.classList.contains("chat-line__message")) {
+                            observer.disconnect();
+                            replaceTwitchChat();
+                        }
+                    }
+                });
+            }
+        }
+    };
+
+    // Create an observer instance linked to the callback function
+    const observer = new MutationObserver(callback);
+
+    // Start observing the target node for configured mutations
+    observer.observe(targetNode, config);
 })();
