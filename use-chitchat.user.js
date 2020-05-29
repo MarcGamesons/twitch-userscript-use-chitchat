@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Use ChitChat
 // @namespace    http://github.com/marcgamesons
-// @version      1.3.1
+// @version      1.3.2
 // @updateURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/use-chitchat.user.js
 // @downloadURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/use-chitchat.user.js
 // @description  Replaces Twitch's default chat with https://chitchat.ma.pe by https://twitter.com/mape
@@ -13,7 +13,6 @@
 
 (function () {
     'use strict';
-
 
     function replaceTwitchChat() {
         // Get the container that contains the chat messages.
@@ -33,16 +32,7 @@
         ifrm.style.height = "100%";
 
         // Append the iframe to the container that contains the chat messages.
-        node[0].appendChild(ifrm);
-
-        // v1.2 Update localStorage to enable forceTopBottomLayout.
-        ifrm = document.getElementById("ChitChatFrame").contentWindow;
-        var settings = ifrm.postMessage(localStorage.getItem("settings"), "*");
-        var data = JSON.parse(settings);
-        data.forceTopBottomLayout = true;
-        data = JSON.stringify(data);
-        ifrm.postMessage(localStorage.setItem("settings", data));
-        ifrm.location.reload();
+        chatContainer.appendChild(ifrm);
     }
 
     // Select the node that will be observed for mutations

@@ -1,7 +1,13 @@
-# Version: 1.3.1
+# Version: 1.3.2
 **Release Date: 2020.05.29**
 ##### Fixes:
 - Fixed chit chat sometimes not loading correctly.
+
+---------------------------------------------------------------------------------------------------
+# Version: 1.3.1
+**Release Date: 2020.05.29**
+##### Fixes:
+- We don't speak about what happened here...
 
 ---------------------------------------------------------------------------------------------------
 # Version: 1.3
