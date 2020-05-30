@@ -1,3 +1,10 @@
+# Version: 1.4
+**Release Date: 2020.05.30**
+##### Fixes:
+- Fixed chit chat not loading on page load.
+- Fixed chit chat not loading if loading a channel from the `followed channels` sidebar on the left side.
+
+---------------------------------------------------------------------------------------------------
 # Version: 1.3.2
 **Release Date: 2020.05.29**
 ##### Fixes:
