@@ -40,32 +40,32 @@
 
 - Fixed the script not working with the latest Twitch design changes.
 
-## [1.2.2] - 2020-xx-yy
+## [1.2.2] - 2018-07-24
 
 ### Changed
 
 - Decreased the time you have to wait until the Chit Chat embed is replacing the chat.
 - Changed the file structure.
 
-## [1.2.1] - 2020-xx-yy
+## [1.2.1] - 2018-07-16
 
 ### Added
 
 - Added auto-updating.
 
-## [1.2.0] - 2020-xx-yy
+## [1.2.0] - 2018-07-16
 
 ### Changed
 
 - Fixed the layout in Chrome.
 
-## [1.1.0] - 2020-xx-yy
+## [1.1.0] - 2017-12-31
 
 ### Changed
 
 - Fixed the script not working with the latest Twitch design changes.
 
-## [1.0.0] - 2020-xx-yy
+## [1.0.0] - 2017-05-30
 
 - Initial release.
 - Twitch chat is now replaced with a [Chit Chat embed](https://chitchat.ma.pe).
