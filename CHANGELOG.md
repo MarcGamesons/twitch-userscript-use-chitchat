@@ -1,61 +1,71 @@
-# Version: 1.4.1
-**Release Date: 2020.05.31**
-##### Changes:
-- Further improvements to chit chat loading behaviour.
+# Changelog
 
----------------------------------------------------------------------------------------------------
-# Version: 1.4
-**Release Date: 2020.05.30**
-##### Fixes:
-- Fixed chit chat not loading on page load.
-- Fixed chit chat not loading if loading a channel from the `followed channels` sidebar on the left side.
+## [1.4.2] - 2020-05-31
 
----------------------------------------------------------------------------------------------------
-# Version: 1.3.2
-**Release Date: 2020.05.29**
-##### Fixes:
-- Fixed chit chat sometimes not loading correctly.
+### Added
 
----------------------------------------------------------------------------------------------------
-# Version: 1.3.1
-**Release Date: 2020.05.29**
-##### Fixes:
-- We don't speak about what happened here...
+- Added a Markdownlint rule definitions file.
 
----------------------------------------------------------------------------------------------------
-# Version: 1.3
-**Release Date: 2020.05.19**
-##### Fixes:
-- Fixed the script not working with the latest Twitch upRelease Dates.
+### Changed
 
----------------------------------------------------------------------------------------------------
-# Version: 1.2.2
-**Release Date: xxxx.yy.zz**
-##### Changes:
-- Decreased the time you have to wait until ChitChat is replacing the chat.
+- Reformated the readme and the changelog.
+- Refactored some of the code for better readability.
+
+## [1.4.1] - 2020-05-31
+
+### Changed
+
+- Further improvements to the Chit Chat embed loading behaviour.
+
+## [1.4.0] - 2020-05-30
+
+### Changed
+
+- Fixed Chit Chat embed not loading on page load.
+- Fixed Chit Chat embed not loading if clicking on a followed channel in the left hand sidebar.
+
+## [1.3.2] - 2020-05-29
+
+### Changed
+
+- Fixed Chit Chat embed sometimes not loading correctly.
+
+## [1.3.1] - 2020-05-29
+
+- We don't speak about this version.
+
+## [1.3.0] - 2020-05-19
+
+### Changed
+
+- Fixed the script not working with the latest Twitch design changes.
+
+## [1.2.2] - 2020-xx-yy
+
+### Changed
+
+- Decreased the time you have to wait until the Chit Chat embed is replacing the chat.
 - Changed the file structure.
 
----------------------------------------------------------------------------------------------------
-# Version: 1.2.1
-**Release Date: xxxx.yy.zz**
-##### Additions:
+## [1.2.1] - 2020-xx-yy
+
+### Added
+
 - Added auto-updating.
 
----------------------------------------------------------------------------------------------------
-# Version: 1.2
-**Release Date: xxxx.yy.zz**
-##### Fixes:
+## [1.2.0] - 2020-xx-yy
+
+### Changed
+
 - Fixed the layout in Chrome.
 
----------------------------------------------------------------------------------------------------
-# Version: 1.1
-**Release Date: xxxx.yy.zz**
-##### Fixes:
-- Fixed the script not working with the latest Twitch upRelease Dates.
+## [1.1.0] - 2020-xx-yy
 
----------------------------------------------------------------------------------------------------
-# v1.0
-**Release Date: xxxx.yy.zz**
-##### Changes:
+### Changed
+
+- Fixed the script not working with the latest Twitch design changes.
+
+## [1.0.0] - 2020-xx-yy
+
 - Initial release.
-- Twitch chat is now replaced with [ChitChat](https://chitchat.ma.pe).
+- Twitch chat is now replaced with a [Chit Chat embed](https://chitchat.ma.pe).
