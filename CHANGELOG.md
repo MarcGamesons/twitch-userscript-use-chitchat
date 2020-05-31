@@ -1,3 +1,9 @@
+# Version: 1.4.1
+**Release Date: 2020.05.31**
+##### Changes:
+- Further improvements to chit chat loading behaviour.
+
+---------------------------------------------------------------------------------------------------
 # Version: 1.4
 **Release Date: 2020.05.30**
 ##### Fixes:

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Use ChitChat
 // @namespace    http://github.com/marcgamesons
-// @version      1.4
+// @version      1.4.1
 // @updateURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/use-chitchat.user.js
 // @downloadURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/use-chitchat.user.js
 // @description  Replaces Twitch's default chat with https://chitchat.ma.pe by https://twitter.com/mape
@@ -29,7 +29,7 @@ var onDOMReady = function () {
         ifrm.id = "ChitChatFrame";
         ifrm.setAttribute("src", "https://chitchat.ma.pe/" + casterURL[1]);
         ifrm.style.width = "100%";
-        ifrm.style.height = "100%";
+        ifrm.style.height = "99%";
 
         // Append the iframe to the container that contains the chat messages.
         chatContainer.appendChild(ifrm);
@@ -38,12 +38,10 @@ var onDOMReady = function () {
     let originalHref = document.location.href;
 
     // Select the node that will be observed for mutations
-    const chatContentTargetNode = document.querySelector('.chat-shell');
-    const hrefChangedTargetNode = document.querySelector('body');
+    const targetNode = document.querySelector('body');
 
     // Options for the observer (which mutations to observe)
-    const chatContentLoadedConfig = { childList: true, subtree: true };
-    const hrefChangedConfig = { childList: true, subtree: true };
+    const observerConfig = { childList: true, subtree: true };
 
     // Callback function to execute when chatContent mutations are observed
     const chatContentLoadedCallback = function (mutationsList, observer) {
@@ -51,7 +49,7 @@ var onDOMReady = function () {
             if (mutation.type === 'childList') {
                 mutation.addedNodes.forEach(addedNode => {
                     if (addedNode.classList !== undefined) {
-                        if (addedNode.classList.contains("chat-line__message")) {
+                        if (addedNode.classList.contains("chat-line__status")) {
                             replaceTwitchChat();
                             observer.disconnect();
                         }
@@ -62,12 +60,12 @@ var onDOMReady = function () {
     };
 
     // Callback function to execute when hrefChagend mutations are observed
-    const hrefChangedCallback = function (mutationsList, observer) {
+    const hrefChangedCallback = function (mutationsList) {
         for (let mutation of mutationsList) {
             if (mutation.type === 'childList') {
                 if (originalHref != document.location.href) {
                     originalHref = document.location.href;
-                    chatContentLoadedObserver.observe(chatContentTargetNode, chatContentLoadedConfig);
+                    chatContentLoadedObserver.observe(targetNode, observerConfig);
                 }
             }
         }
@@ -78,8 +76,8 @@ var onDOMReady = function () {
     const hrefChangedObserver = new MutationObserver(hrefChangedCallback);
 
     // Start observing the target node for configured mutations
-    chatContentLoadedObserver.observe(chatContentTargetNode, chatContentLoadedConfig);
-    hrefChangedObserver.observe(hrefChangedTargetNode, hrefChangedConfig);
+    chatContentLoadedObserver.observe(targetNode, observerConfig);
+    hrefChangedObserver.observe(targetNode, observerConfig);
 };
 
 if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
