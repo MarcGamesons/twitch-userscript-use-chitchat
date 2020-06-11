@@ -11,6 +11,9 @@ This is a userscript that replaces the chat on [Twitch](https://twitch.tv) with 
 
 After installing the script make sure that it is enabled. It will then replace the chat automatically.
 
+### Chit Chat is still not loading
+Make sure that your browser or third party extensions don't block cookies nor local storage data.
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
