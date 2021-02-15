@@ -16,7 +16,7 @@ var onDOMReady = function () {
 
     function replaceTwitchChat() {
         // Get the container that contains the chat messages.
-        const chatContainer = document.querySelector(".chat-list");
+        const chatContainer = document.querySelector(".chat-list--default");
 
         // Delete all child nodes.
         while (chatContainer.firstChild) {

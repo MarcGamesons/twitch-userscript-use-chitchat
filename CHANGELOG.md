@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.3] - 2021-02-15
+
+### Changed
+
+- Fixed #23 "[BUG] Not Working - No Replacement".
+
 ## [1.4.2] - 2020-05-31
 
 ### Added
