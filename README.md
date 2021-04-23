@@ -2,8 +2,6 @@
 
 This is a userscript that replaces the chat on [Twitch](https://twitch.tv) with an embed of [Chit Chat](https://chitchat.ma.pe/) by [mape](https://twitter.com/mape).
 
-<<<<<<< Updated upstream
-=======
 ## Bookmarklet
 
 Instead of downloading a UserScript you can create a bookmarklet.
@@ -19,7 +17,6 @@ javascript:(function()%7B%2F%2F%20Get%20the%20container%20that%20contains%20the%
 6. Click on the bookmarklet to replace chat with ChitChat.
 To undo just reload the page.
 
->>>>>>> Stashed changes
 ## Installation
 
 1. Make sure that you have installed the Tampermonkey browser extension. You can get it on [tampermonkey.net](https://www.tampermonkey.net/).
