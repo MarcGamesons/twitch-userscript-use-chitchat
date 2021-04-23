@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.0] - 2021-04-23
+
+- Added bookmarklet to code and readme.
+
 ## [1.4.3] - 2021-02-15
 
 ### Changed
