@@ -1,6 +1,14 @@
 # Changelog
 
+## [1.5.1] - 2022-03-27
+
+### Changed
+
+- Fixed #29 "[BUG] Works fine except in Popout Chat".
+
 ## [1.5.0] - 2021-04-23
+
+### Changed
 
 - Added bookmarklet to code and readme.
 
