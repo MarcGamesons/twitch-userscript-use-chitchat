@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Use ChitChat
 // @namespace    http://github.com/marcgamesons
-// @version      1.4.3
+// @version      1.5.1
 // @updateURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/use-chitchat.user.js
 // @downloadURL	 https://github.com/MarcGamesons/twitch-userscript-use-chitchat/raw/master/use-chitchat.user.js
 // @description  Replaces Twitch's default chat with https://chitchat.ma.pe by https://twitter.com/mape
@@ -27,7 +27,12 @@ var onDOMReady = function () {
         const chatFrame = document.createElement("iframe");
         const casterURL = window.location.pathname.split('/');
         // chatFrame.id = "ChitChatFrame";
-        chatFrame.setAttribute("src", "https://chitchat.ma.pe/" + casterURL[1]);
+        if(casterURL[1] == "popout") {
+            chatFrame.setAttribute("src", "https://chitchat.ma.pe/" + casterURL[2]);
+        }
+        else {
+            chatFrame.setAttribute("src", "https://chitchat.ma.pe/" + casterURL[1]);
+        }
         chatFrame.style.width = "100%";
         chatFrame.style.height = "99%";
 
@@ -55,7 +60,8 @@ var onDOMReady = function () {
                         // So far this has been the most reliable node to check against.
                         if (addedNode.classList.contains("chat-line__status")) {
                             replaceTwitchChat();
-                            observer.disconnect();
+                            // This was messing with popout chat.
+                            // observer.disconnect();
                         }
                     }
                 });
@@ -64,6 +70,8 @@ var onDOMReady = function () {
     };
 
     // Callback function to execute when mutations of the documents href are observed
+    // I use this to track if a user clicks on a channel they are following on the left of
+    // the screen in the FOLLOWED CHANNELS area.
     const hrefObservationCallback = function (mutationsList) {
         for (let mutation of mutationsList) {
             if (mutation.type === 'childList') {
